@@ -1,0 +1,35 @@
+/* imposto */
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    double n, imposto1, imposto2,imposto3, a, b, c, w, x, y, z;
+    scanf("%lf", &n);
+    
+    if (n>= 0.00 && n<= 2000.00)
+    {
+        printf("Isento\n");    
+    }
+    if (n>= 2000.01 && n<= 3000.00)
+    {
+        imposto1 = ((n-2000.00)*0.08);
+        printf("R$ %.2lf\n", imposto1);
+    }
+    if (n>= 3000.01 && n<= 4500.00)
+    {
+        a = (n - 3000)*0.18;
+        b = ((n-(n - 3000))-2000)*0.08;
+        imposto2 = a+b;
+        printf("R$ %.2lf\n", imposto2);
+    }
+    if (n> 4500.00)
+    {
+        w = (n - 4500);
+        x = ((n-w)-3000);
+        y = ((n-w) - x);
+        z = y - 2000;
+        imposto3 = (w*0.28)+(x*0.18)+(z*0.08);
+        printf("R$ %.2lf\n", imposto3);
+    }
+return 0;
+}
