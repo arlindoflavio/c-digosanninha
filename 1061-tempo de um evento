@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main(){
+    int diaI=0, diaF=0, horaI=0, minI=0, segI=0, horaF=0, minF=0, segF=0;
+    int dias=0, horas=0, minutos=0, segundos=0;
+    
+    //Leitura das informações
+    scanf("Dia %d\n", &diaI);
+    scanf("%d : %d : %d\n", &horaI, &minI, &segI);
+    scanf("Dia %d\n", &diaF);
+    scanf("%d : %d : %d\n", &horaF, &minF, &segF);
+    
+
+    
+    segundos = segF+(60-segI);
+
+    //calculo minutos
+    //eu somei os minutos que passaram do ultimo dia com os minutos que faltavam pra completar 1 hora do dia que iniciou
+    minutos = minF+(59-minI);
+
+    horas = horaF+(23-horaI);
+    dias = diaF-diaI;
+
+    if (segundos>=60){
+        segundos = segundos-60;
+        minutos++;
+    }
+    if (minutos>=60){
+        minutos = minutos-60;
+        horas++;
+    }
+
+    if (horas>=24){
+        horas = horas-24;
+        dias++;
+    }
+    if (dias==0 || dias==1){
+        dias=0;
+    }
+    
+    else{
+        dias--;
+    }
+    
+    //imprimi a resposta
+    printf("%d dia(s)\n", dias);
+    printf("%d hora(s)\n", horas);
+    printf("%d minuto(s)\n", minutos);
+    printf("%d segundo(s)\n", segundos);
+    
+return 0;
+}
