@@ -1,0 +1,28 @@
+//esse programa calcula número de casas de um tabuleiro//
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    //declaração de variáveis
+    int n, branco, preto, total;
+    
+    //leitura da variável n
+    scanf("%d\n", &n);
+    
+    //calculo o total de casas no tabuleiro
+    total = pow(n,2);
+    
+    //se n é par será feito um calculo, caso seja impar será outro
+    if (n%2==0){
+        branco = total/2;
+        preto = total/2; 
+    }
+    else{
+        branco = (total/2)+1;
+        preto = total/2;
+    }
+    
+    //imprime a resposta
+    printf("%d casas brancas e %d casas pretas\n", branco, preto);
+return 0;
+}
