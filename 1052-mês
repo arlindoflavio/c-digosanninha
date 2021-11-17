@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(){
+    int mes;
+    scanf("%d", &mes);
+    //janeiro
+    if (mes==1){
+        printf("January\n");
+    }
+    //fevereiro
+    if (mes==2){
+        printf("February\n");
+    }
+    //março
+    if (mes==3){
+        printf("March\n");
+    }
+    //abril
+    if (mes==4){
+        printf("April\n");
+    }
+    //maio
+    if (mes==5){
+        printf("May\n");
+    }
+    //junho
+    if (mes==6){
+        printf("June\n");
+    }
+    //julho
+    if (mes==7){
+        printf("July\n");
+    }
+    //agosto
+    if (mes==8){
+        printf("August\n");
+    }
+    //setembro
+    if (mes==9){
+        printf("September\n");
+    }
+    //outubro
+    if (mes==10){
+        printf("October\n");
+    }
+    //novembro
+    if (mes==11){
+        printf("November\n");
+    }
+    //dezembro
+    if (mes==12){
+        printf("December\n");
+    }
+return 0;
+}
