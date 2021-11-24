@@ -10,5 +10,5 @@ int main()
     A= pot*n;
     printf ("A=%.4lf\n", A);
     
-return 0;
+    return 0;
 } 
